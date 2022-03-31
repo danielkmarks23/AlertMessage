@@ -1,0 +1,99 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "SwiftOnoneSupport",
+      "printedName": "SwiftOnoneSupport",
+      "declKind": "Import",
+      "moduleName": "AlertMessage"
+    },
+    {
+      "kind": "Import",
+      "name": "_Concurrency",
+      "printedName": "_Concurrency",
+      "declKind": "Import",
+      "moduleName": "AlertMessage"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "AlertMessage",
+      "printedName": "AlertMessage",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "text",
+          "printedName": "text",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:12AlertMessageAAV4textSSvp",
+          "mangledName": "$s12AlertMessageAAV4textSSvp",
+          "moduleName": "AlertMessage",
+          "declAttributes": [
+            "HasInitialValue",
+            "SetterAccess",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:12AlertMessageAAV4textSSvg",
+              "mangledName": "$s12AlertMessageAAV4textSSvg",
+              "moduleName": "AlertMessage",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AlertMessage",
+              "printedName": "AlertMessage.AlertMessage",
+              "usr": "s:12AlertMessageAAV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:12AlertMessageAAVABycfc",
+          "mangledName": "$s12AlertMessageAAVABycfc",
+          "moduleName": "AlertMessage",
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:12AlertMessageAAV",
+      "mangledName": "$s12AlertMessageAAV",
+      "moduleName": "AlertMessage"
+    }
+  ],
+  "json_format_version": 6
+}

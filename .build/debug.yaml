@@ -1,0 +1,78 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "AlertMessage-debug.module": ["<AlertMessage-debug.module>"]
+  "AlertMessagePackageTests-debug.test": ["<AlertMessagePackageTests-debug.test>"]
+  "AlertMessageTests-debug.module": ["<AlertMessageTests-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<AlertMessage-debug.module>"]
+  "test": ["<AlertMessage-debug.module>","<AlertMessagePackageTests-debug.test>","<AlertMessageTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/danielmarks/Documents/AlertMessage/Sources/AlertMessage/":
+    is-directory-structure: true
+  "/Users/danielmarks/Documents/AlertMessage/Tests/AlertMessageTests/":
+    is-directory-structure: true
+commands:
+  "<AlertMessage-debug.module>":
+    tool: phony
+    inputs: ["/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.build/AlertMessage.swift.o","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.swiftmodule"]
+    outputs: ["<AlertMessage-debug.module>"]
+
+  "<AlertMessagePackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessagePackageTests.xctest/Contents/MacOS/AlertMessagePackageTests"]
+    outputs: ["<AlertMessagePackageTests-debug.test>"]
+
+  "<AlertMessageTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessageTests.build/AlertMessageTests.swift.o","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessageTests.swiftmodule"]
+    outputs: ["<AlertMessageTests-debug.module>"]
+
+  "C.AlertMessage-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/danielmarks/Documents/AlertMessage/Sources/AlertMessage/AlertMessage.swift"]
+    outputs: ["/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.build/AlertMessage.swift.o","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "AlertMessage"
+    module-output-path: "/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.swiftmodule"
+    import-paths: ["/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug"]
+    temps-path: "/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.build"
+    objects: ["/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.build/AlertMessage.swift.o"]
+    other-args: ["-target","arm64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.build/AlertMessage-Swift.h","-color-diagnostics"]
+    sources: ["/Users/danielmarks/Documents/AlertMessage/Sources/AlertMessage/AlertMessage.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "C.AlertMessagePackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.build/AlertMessage.swift.o","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessageTests.build/AlertMessageTests.swift.o"]
+    outputs: ["/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessagePackageTests.xctest/Contents/MacOS/AlertMessagePackageTests"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/AlertMessagePackageTests.xctest/Contents/MacOS/AlertMessagePackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug","-o","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessagePackageTests.xctest/Contents/MacOS/AlertMessagePackageTests","-module-name","AlertMessagePackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessagePackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/macosx","-target","arm64-apple-macosx11.0","-Xlinker","-add_ast_path","-Xlinker","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessageTests.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.AlertMessageTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/danielmarks/Documents/AlertMessage/Tests/AlertMessageTests/AlertMessageTests.swift","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.swiftmodule"]
+    outputs: ["/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessageTests.build/AlertMessageTests.swift.o","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessageTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "AlertMessageTests"
+    module-output-path: "/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessageTests.swiftmodule"
+    import-paths: ["/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug"]
+    temps-path: "/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessageTests.build"
+    objects: ["/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessageTests.build/AlertMessageTests.swift.o"]
+    other-args: ["-target","arm64-apple-macosx11.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics"]
+    sources: ["/Users/danielmarks/Documents/AlertMessage/Tests/AlertMessageTests/AlertMessageTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/danielmarks/Documents/AlertMessage/Sources/AlertMessage/","/Users/danielmarks/Documents/AlertMessage/Tests/AlertMessageTests/","/Users/danielmarks/Documents/AlertMessage/Package.swift","/Users/danielmarks/Documents/AlertMessage/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

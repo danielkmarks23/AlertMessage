@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.build/master.swiftdeps"
+  },
+  "/Users/danielmarks/Documents/AlertMessage/Sources/AlertMessage/AlertMessage.swift": {
+    "dependencies": "/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.build/AlertMessage.d",
+    "object": "/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.build/AlertMessage.swift.o",
+    "swiftmodule": "/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.build/AlertMessage~partial.swiftmodule",
+    "swift-dependencies": "/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.build/AlertMessage.swiftdeps"
+  }
+}

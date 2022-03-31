@@ -1,0 +1,4 @@
+module AlertMessage {
+    header "/Users/danielmarks/Documents/AlertMessage/.build/arm64-apple-macosx/debug/AlertMessage.build/AlertMessage-Swift.h"
+    requires objc
+}
